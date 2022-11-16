@@ -1,0 +1,12 @@
+<resources>
+        <string name="app_name">NCHU新闻网</string>
+    <string name="title_news">新闻</string>
+    <string name="title_me">我</string>
+    <string name="user_register">用户注册</string>
+    <string name="welcome">欢迎进入使用</string>
+    <string name="welcome_register">欢迎您加入我们!</string>
+    <string name="register_new_user">注册新用户？</string>
+    <string name="hint_account">请输入账户名</string>
+    <string name="hint_password">请输入密码</string>
+    <string name="input_view">发表您的观点</string>
+</resources>

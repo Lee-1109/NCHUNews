@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.example.nchunews"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //设置数据绑定与视图绑定
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    //添加Lombok依赖
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    //添加Bomb云数据库依赖
+    implementation 'io.github.bmob:android-sdk:3.8.4'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.okio:okio:3.0.0-alpha.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //实现图片轮播的banner控件
+    implementation 'com.youth.banner:banner:2.1.0'
+    //图片加载Glide控件
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //配合使用 高斯模糊
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    //添加Gson包
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //Gson 数据解析器依赖库
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    //retrofit2 依赖库
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    //添加jsoup的依赖
+    implementation 'org.jsoup:jsoup:1.13.1'
+    //下拉刷新
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    //基本配置
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="@string/welcome_register"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+        <EditText
+            android:id="@+id/rAccount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_login_background"
+            android:hint="@string/hint_account"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/rPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rAccount"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape_login_background"
+            android:hint="@string/hint_password"
+            android:inputType="numberPassword"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/doRegister"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/rPassword"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

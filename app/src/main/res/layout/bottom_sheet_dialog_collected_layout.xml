@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/dialog_bottom_sheet_collected"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="right">
+        <!--关闭查看收藏按钮-->
+        <TextView
+            android:id="@+id/me_collect_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_close" />
+        <!--收藏标题-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/me_collect_close"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:text="我的收藏"
+            android:textColor="#333"
+            android:textSize="24sp" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/me_collect_recycleList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dialog_bottom_sheet_collected"
+        android:background="#fff" />
+</RelativeLayout>
